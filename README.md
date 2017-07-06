@@ -19,6 +19,8 @@
   - app/\*.js.map
 
 2. Run { $ git config --global core.excludesfile ~/.gitignore_global } in the console log.
+2.  NOT SURE THIS WORKS -- use regular git ignore file
+
 
 3. Create project folder with the following files:
   - README.md

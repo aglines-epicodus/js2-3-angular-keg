@@ -1,3 +1,18 @@
 #!/bin/bash
 npm install gulp --save-dev
+npm install browserify --save-dev
+npm install gulp-concat --save-dev
+npm install vinyl-source-stream --save-dev
+npm install gulp-uglify --save-dev
+npm install gulp-util --save-dev
+npm install del --save-dev
+npm install jshint --save-dev
+npm install gulp-jshint --save-dev
+
+npm install bower -g
+npm install bower-files --save-dev
+npm install browser-sync --save-dev
+bower install moment --save
+bower install jquery --save
+bower install bootstrap --save
 exit;
