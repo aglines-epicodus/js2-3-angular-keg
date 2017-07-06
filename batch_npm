@@ -1,4 +1,6 @@
 #!/bin/bash
+npm install
+bower install
 npm install gulp --save-dev
 npm install browserify --save-dev
 npm install gulp-concat --save-dev

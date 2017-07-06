@@ -330,7 +330,7 @@ exit;
 
   platform.bootstrapModule(AppModule);
   ```
-16. systemjs.config.js file
+16. systemjs.config.js file at project top level folder
 ```Javascript
 /**
  * System configuration for Angular 2 samples
@@ -377,6 +377,25 @@ exit;
 })(this);
 ```
 
+17. app.component.ts file:
+```Javascript
+import { Component } from '@angular/core';
+
+@Component({
+  selector: 'app-root',
+  template: `
+  <div class="container">
+    <h1>To Do List</h1>
+    `
+})
+
+export class AppComponent {
+}
+```
+
+
+
+
 ## Specs
 see below
 
@@ -395,30 +414,6 @@ _final readme begins here_
 #### **By Andrew Glines**
 
 ## Description
-
-This web application will allow a user and employee to view all beers/kegs sold by name, brewery, price, keg level, and alcohol content. Employees can add and edit keg listings.
-
-|Behavior| Input (User Action/Selection) |Output|
-|---|:---|:---|
-|Patron see a list/menu of all available kegs.| "list of beers"|"list of beers"|
-|For each keg, patron sees its name, brand, price and alcoholContent.|"Boneyard RPM, Boneyard Brewery, $6 20oz, 8%"|"Boneyard RPM, Boneyard Brewery, $6 20oz, 8%"|
-|An employee can fill out a form when a new keg is tapped to add it to the list.| "Fill out form: name, brand, price and alcoholContent"| "beer name, brand, price and alcoholContent"|
-|An employee has the option to edit a keg's properties after entering them to fix mistakes.|"change Boneyard to Stone"|"Stone"|
-|A patron and/or employee can see how many pints are left in a keg. (A full keg has roughly 124 pints.)|"Boneyard 24 pints left"| "24 pints left"|
-|An employee can click a button next to a keg whenever a pint is sold decreasing the number of pints left by 1.|"sells pint, clicks button"| keg 124 - 1 pint|
-|An employee can see kegs with less than 10 pints left so they can be ready to change them.|"keg with >10 pints"|"keg colored red"|
-|A patron sees color-coded kegs prices based on style of beer for easy readability.| "IPAs=orange, Ciders=light yellow"| "IPA=orange, Ciders=light yellow"|
-|A patron can use the alcohol content property to display stronger beers differently than weaker beers.|"8% = green lettering, 5% = yellow lettering"| "Boneyard in green, Cider Riot in yellow"|
-
-WISH LIST FUNCTIONALITY:
-
-|Behavior| Input (User Action/Selection) |Output|
-|---|:---|:---|
-|Employee can click a button for 32oz growlers sold.|"click 32oz growler sold button"|keg 124 - 2 pints|
-|Employee can click a button for 64oz growlers sold.|"click 64oz growler sold button"|keg 124 - 4 pints|
-|A patron can filter kegs by style of beer.|"IPAs"|"list of IPAs"|
-|Employee can mark a keg for discounted sale.|"edit Boneyard RPM $4/pint"| "Boneyard RPM $4/pint", keg turns blue|
-|Employee can set a happy hour.|"keg prices lower"|"all kegs $4/pint"|
 
 
 ## Setup/Installation Requirements
