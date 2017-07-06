@@ -146,6 +146,31 @@
   });
 ```
 
+7A.  Batch file for npm and bower commands: copy the below text into "batch_npm"
+
+#!/bin/bash
+npm install gulp --save-dev
+npm install browserify --save-dev
+npm install gulp-concat --save-dev
+npm install vinyl-source-stream --save-dev
+npm install gulp-uglify --save-dev
+npm install gulp-util --save-dev
+npm install del --save-dev
+npm install jshint --save-dev
+npm install gulp-jshint --save-dev
+
+npm install bower -g
+npm install bower-files --save-dev
+npm install browser-sync --save-dev
+bower install moment --save
+bower install jquery --save
+bower install bootstrap --save
+exit;
+
+ - Save file in top level of project folder as "batch_npm"
+ - Run chmod +x ~/Desktop/project_folder/batch_npm to make file exectuable
+ - Run bash batch_npm and all commands will run
+
 7. Install gulp packages
   - npm install gulp --save-dev
   - npm install browserify --save-dev
@@ -167,6 +192,7 @@
 
 9. Install angular packages
   - not needed if included in the package.json file below, load if things break
+
 10. Index html headers and body
 ```html
 <html>
@@ -196,10 +222,10 @@
   </body>
 </html>
 ```
-11. pacakge.json file
+11. package.json file
 ```json
 {
-  "name": "taproom",
+  "name": "js2-3-angular-taproom",
   "version": "1.0.0",
   "scripts": {
     "start": "tsc && concurrently \"npm run tsc:w\" \"npm run lite\" ",
@@ -284,9 +310,11 @@
   import { NgModule }      from '@angular/core';
   import { BrowserModule } from '@angular/platform-browser';
   import { AppComponent }   from './app.component';
+  import { FormsModule }   from '@angular/forms';
+
 
   @NgModule({
-    imports: [ BrowserModule ],
+    imports: [ BrowserModule, FormsModule ],
     declarations: [ AppComponent ],
     bootstrap:    [ AppComponent ]
   })
@@ -352,13 +380,19 @@
 ## Specs
 see below
 
+
+
+
+
+
+
 _final readme begins here_
 
 # Taproom
 
-#### An Epicodus 2-day project in Angular, 07.05.17
+#### An Epicodus 2-day project in Angular
 
-#### **By Jun Fritz and Anabel Ramirez**
+#### **By Andrew Glines**
 
 ## Description
 
