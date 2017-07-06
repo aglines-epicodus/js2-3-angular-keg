@@ -1,0 +1,19 @@
+{
+  "name": "js2-3-angular-taproom",
+  "version": "1.0.0",
+  "description": "Taproom",
+  "main": "gulpfile.js",
+  "scripts": {
+    "test": "test"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/aglines-epicodus/js2-3-angular-taproom.git"
+  },
+  "author": "Andrew Glines",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/aglines-epicodus/js2-3-angular-taproom/issues"
+  },
+  "homepage": "https://github.com/aglines-epicodus/js2-3-angular-taproom#readme"
+}

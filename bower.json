@@ -1,0 +1,17 @@
+{
+  "name": "js2-3-angular-taproom",
+  "description": "Taproom",
+  "main": "gulpfile.js",
+  "authors": [
+    "Andrew Glines"
+  ],
+  "license": "ISC",
+  "homepage": "https://github.com/aglines-epicodus/js2-3-angular-taproom",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ]
+}
