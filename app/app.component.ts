@@ -9,6 +9,17 @@ import { Component } from '@angular/core';
     <ul>
       <li *ngFor="let currentAnimal of animals">{{currentAnimal.name}}  <button (click)="editAnimal(currentAnimal)">Edit</button></li>
     </ul>
+    <div class="well">
+    <h3>{{selectedAnimal.species}}</h3>
+    <h4><p>Name: {{selectedAnimal.name}}</p>
+    <p>Age: {{selectedAnimal.age}}</p>
+    <p>Diet: {{selectedAnimal.diet}}</p>
+    <p>Location: {{selectedAnimal.location}}</p>
+    <p>Caretakers: {{selectedAnimal.caretakers}}</p>
+    <p>Sex: {{selectedAnimal.sex}}</p>
+    <p>Likes: {{selectedAnimal.likes}}</p>
+    <p>Dislikes: {{selectedAnimal.dislikes}}</p>
+    </h4>
   </div>
   `
 })
