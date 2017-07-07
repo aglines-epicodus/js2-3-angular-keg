@@ -407,11 +407,11 @@ see below
 
 _final readme begins here_
 
-# Taproom
+# Zoo
 
-#### An Epicodus 2-day project in Angular
+#### An Epicodus independent project in Angular
 
-#### **By Andrew Glines**
+#### Author: Andrew Glines
 
 ## Description
 
