@@ -4,9 +4,13 @@ import { Animal } from './animal.model';
 @Component({
   selector: 'animal-list',
   template: `
-  <ul>
-    <li *ngFor="let currentAnimal of childAnimalList">{{currentAnimal.name}}  <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></li>
-  </ul>
+      <ul>
+        <li *ngFor="let currentAnimal of childAnimalList | maturity">{{currentAnimal.name}}
+
+
+
+        <button (click)="editButtonHasBeenClicked(currentAnimal)">Edit</button></li>
+      </ul>
   `
 })
 
