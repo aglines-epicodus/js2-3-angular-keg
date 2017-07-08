@@ -9,22 +9,11 @@ import { Animal } from './animal.model';
     <h3>Today is {{month}}/{{day}}</h3>
     <hr>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
-    </div>
-    <div class="well">
-    <div *ngIf="selectedAnimal">
-      <h4>Edit {{selectedAnimal.species}}
-      <p>Name: <input [(ngModel)]="selectedAnimal.name"></p>
-      <p>Age: <input [(ngModel)]="selectedAnimal.age"></p>
-      <p>Diet: {{selectedAnimal.diet}}</p>
-      <p>Location: {{selectedAnimal.location}}</p>
-      <p>Caretakers: <input [(ngModel)]="selectedAnimal.caretakers"></p>
-      <p>Sex: {{selectedAnimal.sex}}</p>
-      <p>Likes: {{selectedAnimal.likes}}</p>
-      <p>Dislikes: {{selectedAnimal.dislikes}}</p>
-      </h4>
-      <button (click)="finishedEditing()">Done</button>
-      </div>
+    <hr>
+    <edit-animal>[childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"</edit-animal>
+    <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   </div>
+
   `
 })
 
@@ -46,6 +35,10 @@ export class AppComponent {
   }
   finishedEditing() {
     this.selectedAnimal = null;
+  }
+
+  addAnimal(newAnimalFromChild: Animal) {
+    this.masterAnimalList.push(newAnimalFromChild);
   }
 
 }
