@@ -9,17 +9,22 @@ import { Component } from '@angular/core';
     <ul>
       <li *ngFor="let currentAnimal of animals">{{currentAnimal.name}}  <button (click)="editAnimal(currentAnimal)">Edit</button></li>
     </ul>
+    <hr>
+    </div>
     <div class="well">
-    <h3>{{selectedAnimal.species}}</h3>
-    <h4><p>Name: {{selectedAnimal.name}}</p>
-    <p>Age: {{selectedAnimal.age}}</p>
-    <p>Diet: {{selectedAnimal.diet}}</p>
-    <p>Location: {{selectedAnimal.location}}</p>
-    <p>Caretakers: {{selectedAnimal.caretakers}}</p>
-    <p>Sex: {{selectedAnimal.sex}}</p>
-    <p>Likes: {{selectedAnimal.likes}}</p>
-    <p>Dislikes: {{selectedAnimal.dislikes}}</p>
-    </h4>
+    <div *ngIf="selectedAnimal">
+      <h4>Edit {{selectedAnimal.species}}
+      <p>Name: <input [(ngModel)]="selectedAnimal.name"></p>
+      <p>Age: <input [(ngModel)]="selectedAnimal.age"></p>
+      <p>Diet: {{selectedAnimal.diet}}</p>
+      <p>Location: {{selectedAnimal.location}}</p>
+      <p>Caretakers: <input [(ngModel)]="selectedAnimal.caretakers"></p>
+      <p>Sex: {{selectedAnimal.sex}}</p>
+      <p>Likes: {{selectedAnimal.likes}}</p>
+      <p>Dislikes: {{selectedAnimal.dislikes}}</p>
+      </h4>
+      <button (click)="finishedEditing()">Done</button>
+      </div>
   </div>
   `
 })
@@ -36,10 +41,14 @@ export class AppComponent {
     new Animal("Northwest Black Tailed Deer","Tinkerbell",8,"Herbivore","Northern Trail",2,"Female","Delicate roots and leaves","Loud Noises")
   ];
 
-  selectedAnimal: Animal = this.animals[0];
+  // selectedAnimal: Animal = this.animals[0];
+  selectedAnimal = null;
 
   editAnimal(clickedAnimal) {
     this.selectedAnimal = clickedAnimal;
+  }
+  finishedEditing() {
+    this.selectedAnimal = null;
   }
 
 }

@@ -6,6 +6,21 @@
 
 ## Description
 
+1. Users can add newly-admitted animals to the app.
+2. Users can log a new animal by submitting a form with :
+* animal species,
+* name,
+* age,
+* diet,
+* zoo location,
+* number of needed caretakers, *
+* one like
+* one dislike.
+3. Users can view a list of animals I have logged.
+4. Users can view all animals, only young animals (less than 2 years of age), or only mature animals (2 years of age and older).
+5. Users can click an animal to edit its name, age or caretakers.
+
+
 
 ## Setup/Installation Requirements
 
