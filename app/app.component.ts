@@ -10,7 +10,7 @@ import { Animal } from './animal.model';
     <hr>
     <animal-list [childAnimalList]="masterAnimalList" (clickSender)="editAnimal($event)"></animal-list>
     <hr>
-    <edit-animal>[childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"</edit-animal>
+    <edit-animal [childSelectedAnimal]="selectedAnimal" (doneButtonClickedSender)="finishedEditing()"></edit-animal>
     <new-animal (newAnimalSender)="addAnimal($event)"></new-animal>
   </div>
 
