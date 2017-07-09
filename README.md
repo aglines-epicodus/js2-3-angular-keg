@@ -31,8 +31,8 @@ If you have any issues or have questions, ideas, concerns, or contributions plea
 * Angular
 * HTML
 * CSS
-* Bootstrap
 * SASS
+* Bootstrap
 
 ### License
 This software is licensed under the MIT license.
